@@ -1,3 +1,4 @@
+import resolve from "@rollup/plugin-node-resolve";
 import commonjs from '@rollup/plugin-commonjs'; // Convert CommonJS modules to ES6
 import buble from '@rollup/plugin-buble'; // Transpile/polyfill with reasonable browser support
 import vue from 'rollup-plugin-vue'; // Handle .vue SFC files
@@ -11,6 +12,7 @@ export default {
     exports: 'named',
   },
   plugins: [
+    resolve(),
     commonjs(),
     vue({
       css: true, // Dynamically inject css as a <style> tag

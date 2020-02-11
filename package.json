@@ -1,6 +1,6 @@
 {
   "name": "tth-vue-table",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Vue Table With Server Side filtering and pagination",
   "main": "dist/vue-table.umd.js",
   "module": "dist/vue-table.esm.js",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.1",
     "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "acorn": "^6.0.0",
     "rollup": "^1.31.0",
     "rollup-plugin-vue": "^5.1.6",
@@ -40,6 +41,6 @@
   },
   "homepage": "https://github.com/aimensasi/tth-vue-table#readme",
   "dependencies": {
-    "tth-v-pagination": "^1.0.1"
+    "tth-v-pagination": "^1.0.2"
   }
 }
