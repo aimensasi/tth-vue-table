@@ -2,9 +2,26 @@
   "name": "tth-vue-table",
   "version": "1.0.0",
   "description": "Vue Table With Server Side filtering and pagination",
-  "main": "main.js",
+  "main": "dist/vue-table.umd.js",
+  "module": "dist/vue-table.esm.js",
+  "unpkg": "dist/vue-table.min.js",
+  "browser": {
+    "./sfc": "src/vue-table.vue"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-table.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-table.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-table.min.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.1",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "acorn": "^6.0.0",
+    "rollup": "^1.31.0",
+    "rollup-plugin-vue": "^5.1.6",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   },
   "repository": {
     "type": "git",
@@ -21,5 +38,8 @@
   "bugs": {
     "url": "https://github.com/aimensasi/tth-vue-table/issues"
   },
-  "homepage": "https://github.com/aimensasi/tth-vue-table#readme"
+  "homepage": "https://github.com/aimensasi/tth-vue-table#readme",
+  "dependencies": {
+    "tth-v-pagination": "^1.0.1"
+  }
 }

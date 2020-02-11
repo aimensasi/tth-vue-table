@@ -15,7 +15,17 @@ Then you can use it in your component...
 		<div>
 			...
 
-			<v-table />
+			<v-table title="Inquiries List"
+				v-if="index"
+				:index="index"
+				:enable-edit="true"
+				:enable-delete="true"
+				:enable-view="true"
+				@edit="onEdit"
+				@delete="onDelete"
+				@delete="onView"
+				:labels="labels">
+			</v-table>
 		</div>
 	</template>
 	<script>
@@ -26,7 +36,12 @@ Then you can use it in your component...
 			components: {
 				'v-table': VueTable,
 			},
-			...
+			data: function(){
+				index: YourServices.index,
+				labels: [
+					{ field: "id", title: "ID", 'filters': [], 'sortable': true },
+				],
+			},
 			methods: {
 				...
 			}
