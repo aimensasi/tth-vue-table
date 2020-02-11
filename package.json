@@ -1,0 +1,25 @@
+{
+  "name": "tth-vue-table",
+  "version": "1.0.0",
+  "description": "Vue Table With Server Side filtering and pagination",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimensasi/tth-vue-table.git"
+  },
+  "keywords": [
+    "Vue",
+    "Table",
+    "ServerSide",
+    "BootstrapTable"
+  ],
+  "author": "AIMEN.S.A.SASI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aimensasi/tth-vue-table/issues"
+  },
+  "homepage": "https://github.com/aimensasi/tth-vue-table#readme"
+}
