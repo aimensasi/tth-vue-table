@@ -46,11 +46,14 @@
 								</a>
 							</td>
 						</tr>
+						<tr v-if="items.length == 0">
+							<td colspan="4" class="empty-list">No Records Were Found</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
 
-			<v-pagination :total="total" @paginate="onPaginate"/>
+			<v-pagination :total="total" @paginate="onPaginate" v-if="total > 0"/>
 		</div>
 	</div>
 </template>
@@ -64,6 +67,10 @@
 				required: false,
 				type: String,
 				default: 'Items List'
+			},
+			parentId: {
+				required: false,
+				type: Number
 			},
 			index: {
 				required: true,
@@ -114,7 +121,7 @@
 				this.fetch();
 			},
 			fetch: function(){
-				this.index(this, { query: this.filter, onSuccess: ({ data }) => {
+				this.index(this, { parentId: this.parentId, query: this.filter, onSuccess: ({ data }) => {
 					this.items = data.rows;
 					this.total = data.total;
 				}});
