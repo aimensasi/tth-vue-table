@@ -1,6 +1,6 @@
 {
   "name": "tth-vue-table",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vue Table With Server Side filtering and pagination",
   "main": "dist/vue-table.umd.js",
   "module": "dist/vue-table.esm.js",
